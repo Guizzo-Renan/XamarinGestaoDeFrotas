@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projetoFrota.Views.Abastecimentos.Listar"
+             Style="{StaticResource pageStyle}"
+             Title="Abastecimentos">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adicionar" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" BackgroundColor="Black" >
+                <Label HorizontalOptions="FillAndExpand" TextColor="White">Data</Label>
+                <Label HorizontalOptions="FillAndExpand" TextColor="White">Veículo</Label>
+            </StackLayout>
+            <ListView x:Name="ListaAbastecimentos" ItemTapped="ListaAbastecimentos_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Data}"/>
+                                <Label Grid.Column="1" Text="{Binding Automovel.Modelo}"/>
+                            </Grid>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projetoFrota.Views.Veiculos.Cadastro"
+             Style="{StaticResource pageStyle}"
+             Title="Veículos">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label>Placa</Label>
+            <Entry Text="{Binding Placa}"/>
+            <Label>Fabricante</Label>
+            <Entry Text="{Binding Fabricante}"/>
+            <Label>Modelo</Label>
+            <Entry Text="{Binding Modelo}"/>
+            <Label>Cor</Label>
+            <Entry Text="{Binding Cor}"/>
+            <Label>Ano Fabricação</Label>
+            <Entry Text="{Binding Ano}"/>
+            <Button x:Name="btSalvar" Text="Salvar" Clicked="btSalvar_Clicked"/>
+            <Button x:Name="btExcluir" Text="Excluir" Clicked="btExcluir_Clicked"/>
+            <Button x:Name="btCancelar" Text="Cancelar" Clicked="btCancelar_Clicked"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projetoFrota.Views.Abastecimentos.Cadastro"
+             Style="{StaticResource pageStyle}"
+             Title="Abastecimentos">
+    <ContentPage.Content>
+        <StackLayout>
+            <DatePicker x:Name="dataAbastecimento" 
+                        Format="dd/MM/yyyy"
+                        Date="{Binding Data}" />
+            <Picker x:Name="tiposCombustiveis"  
+                    Title="Combustível" 
+                    SelectedIndexChanged="tipoCombustivel_SelectedIndexChanged" />
+            <Picker x:Name="RelacaoVeiculos" Title="Veículo" SelectedIndexChanged="Veiculo_SelectedIndexChanged"/>
+            <Label>Valor do litro</Label>
+            <Entry x:Name="PrecoLitro" Text="{Binding PrecoLitro}"/>
+            <Label>Km atual do veículo</Label>
+            <Entry x:Name="Kmveiculo" Text="{Binding Km}"/>
+            <Label>Litros abastecidos</Label>
+            <Entry x:Name="litros" Text="{Binding Litros}"/>
+
+
+            <Button x:Name="Salvar" Text="Gravar" Clicked="Salvar_Clicked"/>
+            <Button x:Name="Excluir" Text="Excluir" Clicked="Excluir_Clicked"/>
+            <Button x:Name="Cancelar" Text="Cancelar" Clicked="Cancelar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

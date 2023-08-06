@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projetoFrota.Views.Veiculos.Listar"
+             Style="{StaticResource pageStyle}"
+             
+             Title="Veículos">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adicional" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout  Orientation="Horizontal" BackgroundColor="Black" >
+                <Label HorizontalOptions="FillAndExpand" TextColor="White">Placa</Label>
+                <Label HorizontalOptions="FillAndExpand" TextColor="White">Modelo</Label>
+            </StackLayout>
+            <ListView x:Name="ListaVeiculos" ItemTapped="ListaVeiculos_ItemTapped">
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                           
+                                <Label Grid.Column="0" Text="{Binding Placa}"/>
+                                <Label Grid.Column="1" Text="{Binding Modelo}"/>
+                            </Grid>
+                        </ViewCell>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

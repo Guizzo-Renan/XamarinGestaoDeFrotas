@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projetoFrota.Views.Combustiveis.Cadastro"
+             Style="{StaticResource pageStyle}"
+             Title="Combustíveis">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label>Combustível</Label>
+            <Entry x:Name="tipoCombustivel" Text="{Binding Nome}"/>
+            <Label>Valor do litro</Label>
+            <Entry x:Name="valorLitro" Text="{Binding Valor}"/>
+            
+            <Button x:Name="Salvar" Text="Gravar" Clicked="Salvar_Clicked"/>
+            <Button x:Name="Excluir" Text="Excluir" Clicked="Excluir_Clicked"/>
+            <Button x:Name="Cancelar" Text="Cancelar" Clicked="Cancelar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

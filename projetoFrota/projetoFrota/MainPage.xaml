@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projetoFrota.MainPage">
+
+    <StackLayout Orientation="Horizontal"
+                 HorizontalOptions="Center">
+      
+       
+        <Image Source="carro.jpg" WidthRequest="100"></Image>
+        <Image Source="combustivel.png" WidthRequest="100"></Image>
+        <Image Source="carro_posto.jpg" WidthRequest="100"></Image>
+        
+    </StackLayout>
+
+</ContentPage>
